@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accepter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<audio src="The Greatest Showman  Rewrite The Stars Lyric Video  Fox Family Entertainment.mp3"></audio>
+
+<body style="background: rgb(8, 8, 35)">
+  <div class="container">
+    <div>
+      <h1 class="header-txt">Yeahhhhh!!</h1>
+    </div>
+  </div>
+  <div class="git-container">
+    <img
+      src="https://media.giphy.com/media/shS0hiX4ZlJhiAOA4u/giphy.gif?cid=790b76118webyn5l3051ed5ni8hm6v5o5b2pbnyxxc6xw30e&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+      alt="joy">
+  </div>
+  <div class="fireworks-container">
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+  </div>
+</body>
+<script>
+  const audio = document.querySelector("audio")
+
+  const mapromesse = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      audio.play()
+    }, 1000)
+  })
+
+
+
+  const fireworkContainer = document.querySelector(".fireworks-container")
+  function createFirework() {
+    const fireWork = document.createElement("div")
+    fireWork.classList.add("firework")
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+
+    fireWork.style.left = `${x}px`
+    fireWork.style.top = `${y}px`
+
+    fireworkContainer.appendChild(fireWork);
+
+    setTimeout(() => {
+      fireWork.remove()
+    }, 2000)
+  }
+  setInterval(createFirework, 100)
+
+</script>
+
+</html>
