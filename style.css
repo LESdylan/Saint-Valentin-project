@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: pink;
+  flex-direction: column;
+}
+
+#noButton {
+  position: absolute;
+  margin-left: 200px;
+}
+.transition {
+  transition: left 0.5s ease-in-out, right 0.5s ease-in-out,
+    top 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+#yesButton {
+  position: absolute;
+  margin-right: 200px;
+}
+
+.header-txt {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: white;
+  background-color: #ee9caa;
+  border-radius: 50px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.shake-animation {
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+    background: rgba(255, 0, 0, 0.507);
+  }
+  20% {
+    transform: rotate(5deg);
+    background: pink;
+  }
+  40% {
+    transform: rotate(-5deg);
+    background: rgba(255, 0, 0, 0.593);
+  }
+  60% {
+    transform: rotate(5deg);
+    background: rgb(170, 255, 0);
+  }
+  80% {
+    transform: rotate(-5deg);
+    scale: 110%;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: explode 1s ease-out infinite;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0) translate(-100%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10) translate(100%, 50%);
+    opacity: 0;
+  }
+}
